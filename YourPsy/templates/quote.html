@@ -1,0 +1,192 @@
+{%block content%}
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #03a9f4;
+            font-family: sans-serif;
+        }
+        
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 400px;
+            transform-style: preserve-3d;
+            perspective: 2000px;
+            transition: 0.5s;
+        }
+        
+        
+        .box::before{
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border-top: 20px solid #fff;
+            border-left: 20px solid #fff;
+            box-sizing: border-box;
+        }
+        .box::after{
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border-bottom: 20px solid #fff;
+            border-right: 20px solid #fff;
+            box-sizing: border-box;
+        }
+        .text{
+            position: absolute;
+            top: 30px;
+            left: -30px;
+            background: #262626;
+            width: calc(100% + 60px);
+            height: calc(100% - 60px);
+            transition: 0.5s;
+        }
+      /*  .text:hover.text{
+            transform: rotateY(30deg) skewY(-5deg);
+        }
+        .text:hover{
+            transform: translate(-50%, -50%) rotateY(-30deg) skewY(-5deg);
+        }*/
+        
+        .text div{
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            width: 100%;
+            transform: translateY(-50%);
+            padding: 40px 80px;
+            box-sizing: border-box;
+            text-align: center;
+            z-index: 3;
+        }
+        .text div h1{
+            margin: 0 0 20px;
+            color: #fff;
+            padding: 0;
+        }
+         p{
+            margin: 0 0 20px;
+            color: #fff;
+            padding: 0;
+            font-size: 18px;
+        }
+        .fa{
+            width: 80px;
+            height: 80px;
+            background: #fff;
+            color: #262626;
+            text-align: center;
+            line-height: 80px !important;
+            font-size: 40px !important;
+        }
+        .fa.fa1{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .fa.fa2{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+        }
+        button{
+            background: url("{% static 'D:\Project\YourPsy\static\white.png' %}");
+            width: 50px;
+            height: 50px;
+            background-color:transparent;
+            border-radius: 50%;
+        }
+        
+
+    </style>
+    <script>
+        function myFunction() {
+        var greetings;
+        var a=document.getElementById("demo").innerHTML =
+        Math.floor(Math.random() * 10);
+        
+        if (a == 1) {
+            greeting = " It's only when you have the courage to step off the ledge that you'll realize you've had wings all along.";        
+          } else if (a == 2) {
+            greeting = " In every moment, you are the only one who gets to choose your attitude. Choose wisely";
+          }
+            else if (a == 3) {
+                greeting = "The greatest personal fulfillment comes when we contribute to improving the welfare of others.";
+              }
+              else if (a == 4) {
+                greeting = "Who and what you are will be determined by you, not by your circumstances";
+              }
+              else if (a == 5) {
+                greeting = "Praise is one of the best, yet inexpensive gifts we can give to others";
+              }
+              else if (a == 6) {
+                greeting = ": Every good thing you do creates ripples that you may not see. Do them anyway.";
+              }
+              else if (a == 7) {
+                greeting = "If you want to see the gods most beautiful creation, look in the mirror";
+              }
+              else if (a == 8) {
+                greeting = " To achieve your dream, see the world as you want it to be, not as it may appear to be.";
+              }
+              else if (a == 9) {
+                greeting = "Just remember there is not even a single combination of 26 letter that can alone define you ";
+              }
+              else if (a == 0) {
+                greeting = "Never underestimate the power of an unlimited being--YOU.";
+              }
+           else {
+            greeting = " have a Good  day";
+          }
+          document.getElementById("demo").innerHTML = greeting;
+        }
+        </script>
+
+</head>
+<form>
+    <form action="led" method="POST">
+        {% csrf_token%}
+   
+    <div class="box">
+        <i class="fa fa-quote-left fa2" aria-hidden="true"></i>
+            
+        <div class="text">
+            <i class="fa fa-quote-right fa1" aria-hidden="true"></i>
+            <div>
+                <h1>Quote of the day </h1>
+                <p id="demo"> <button onclick="myFunction()"></button>    
+                    
+                </p>
+                    
+            </div>
+
+        </div>
+        
+    </div>
+    
+    </form>
+</body>
+</html>
+{%endblock%}

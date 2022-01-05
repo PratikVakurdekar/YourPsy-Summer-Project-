@@ -1,0 +1,222 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'D:\Project\YourPsy\static\style6.css' %}">
+    <style>
+       .main{
+           margin-left: 50px;
+           margin-right: 150px;
+       }
+       th{
+           padding-left: 110px;
+           padding-right: 100px;
+           font-family: Arial, Helvetica, sans-serif,cursive;
+           color: #fff;
+           font-size: 25px;
+           
+           
+       }
+       td{
+           padding-left: 150px;
+           text-align: center;
+           text-decoration-line: none;
+           
+       }
+       tr{
+           margin-top: 50px;
+       }
+       label{
+           font-size: 30px;
+           text-decoration: none;
+           text-decoration-line: none;
+
+           
+       }
+       button{
+           height: 70px;
+           width: 200px;
+           border-radius: 30px;
+           color: white;
+           border: none;
+           text-decoration: none;
+       }
+       .b1{
+           background-color: #54A2D2;
+       }
+       .b2{
+            background-color: #7E1E80;
+       }
+       .b3{
+            background-color: #1C9B8E;
+       }
+       .b4{
+            background-color: darkgoldenrod;
+       }
+       .r1{
+           background-color:#1C9B8E ;
+       }
+       .general_info{
+           background-color: #54A2D2;
+       }
+    </style>
+</head>
+<body>
+    <header class="sticky">
+        <a href="#" class="logo"> <img src="{% static 'D:\Project\YourPsy\static\brain.png' %}" height="60px" width="60px"></a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="trial2">About</a></li>
+            <li><a href="flip">Personality</a></li>
+            <li><a href="xander">Test</a></li>
+            <li><a href="contact">Contact us</a></li>
+            <li><a href="quote">Quote</a></ li>
+        </ul>
+    </header>
+    
+   
+    <div class="box">
+        <div class="main"> 
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        
+            <table>
+                <th>
+                    <img src="{% static 'D:\Project\YourPsy\static\enfp.png' %}" width="220px" height="220px">
+                </th>
+                <th class="r1">
+                  
+                  
+                    
+                    <p><i>" Your Psychologist focus on what is wrong with people, I want to focus on what is right and what could be right! "</i></p>
+                  <br> <p><i> - Isabel Briggs Myers</i></p>
+                </th>
+                
+            </table>
+        </div>
+            <br>
+        <div class="social"> 
+            <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+       <center> <h1>General Information</h1> </center>
+       <br>
+       <br>
+       <br>
+       <br>
+       <table>
+           
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td>
+         <a href="mbtiintro">   <button class="b1" >
+                <label>MBTI</label>
+            </button></a>
+        </td>
+        <td>
+            <a href="aintro">  <button class="b2">
+                <label>Anxiety</label>
+            </button></a>
+        </td>
+        <td>
+            <a href="dintro"> <button class="b3">
+                <label text-decoration='none'>Depression</label>
+            </button></a>
+        </td>
+        <td>
+            <a href="adhdintro"> <button class="b4">
+                <label>ADHD</label>
+            </button></a>
+        </td>
+        </tr>
+       </table>
+        </div>
+        
+               
+        <div class="test">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+       <center> <h1>Test</h1> </center>
+       <br>
+       <br>
+       <br>
+     
+       <table>
+           <tr>
+               <td>
+                <a href="details1"> <img src="{% static 'D:\Project\YourPsy\static\mbti.png' %}" width="200px" height="200px"></a>
+               </td>
+         
+            <td>
+                <a href="details3"> <img src="{% static 'D:\Project\YourPsy\static\anx.png' %}" width="200px" height="200px"></a>
+            </td>
+      
+            <td>
+                <a href="details2"><img src="{% static 'D:\Project\YourPsy\static\dep.png' %}" width="200px" height="200px"></a>
+            </td>
+       
+            <td>
+                <a href="details4"><img src="{% static 'D:\Project\YourPsy\static\adhd.png' %}" width="200px" height="200px"></a>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td>
+                <label>MBTI</label>
+        </td>
+        <td>
+            <label>Anxiety</label>
+        </td>
+        <td>
+            <label>Depression</label>
+        </td>        
+        <td>
+           <label>ADHD</label>
+        </td>
+        </tr>
+       </table>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+        </div>
+        <div class="general_info">
+        <br>
+        <br>
+        <br>
+        
+
+        
+        
+    </div>
+
+        <div class="contact_us"></div>
+    </div>
+</body>
+</html>

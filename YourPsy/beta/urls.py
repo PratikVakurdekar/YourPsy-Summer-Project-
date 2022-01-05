@@ -1,0 +1,200 @@
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('',views.home, name='home'),
+
+    path('end',views.end,name='end'),
+    path('ned',views.ned,name='ned'),
+    path('sub',views.sub,name='sub'),
+    path('adh',views.adh,name='adh'),
+    path('gol',views.gol,name='gol'),
+    path('ogl',views.ogl,name='ogl'),
+    path('log',views.log,name='log'),
+    path('glo',views.glo,name='glo'),
+
+    path('anxiety',views.anxiety,name='anxiety'),
+    path('aintro',views.aintro,name='aintro'),
+    path('amedication',views.amedication,name='amedication'),
+    path('depression',views.depression,name='depression'),
+    path('dintro',views.dintro,name='dintro'),
+    path('dmedication',views.dmedication,name='dmedication'),
+    path('personalities',views.personalities,name='personalities'),
+    
+    path('mbtiintro',views.mbtiintro,name='mbtiintro'),
+    path('adhdintro',views.adhdintro,name='adhdintro'),
+    path('adhdmedic',views.adhdmedic,name='adhdmedic'),
+    path('adhd',views.adhd,name='adhd'),
+
+    path('details1',views.details1,name='details1'),
+    path('details2',views.details2,name='details2'),
+    path('details3',views.details3,name='details3'),
+    path('details4',views.details4,name='details4'),
+    path('login',views.login,name='login'),
+    path('flip',views.flip,name='flip'),
+    path('xander',views.xander,name='xander'),
+
+    path('elemental',views.elemental,name='elemental'),
+    path('base',views.base,name='base'),
+    path('trial',views.trial,name='trial'),
+    path('quote',views.quote,name='quote'),
+    path('trial2',views.trial2,name='trial2'),
+
+
+    path('enfjc',views.enfjc,name='enfjc'),
+    path('enfjf',views.enfjf,name='enfjf'),
+    path('enfji',views.enfji,name='enfji'),
+    path('enfjp',views.enfjp,name='enfjp'),
+    path('enfjr',views.enfjr,name='enfjr'),
+    path('enfjs',views.enfjs,name='enfjs'),
+    path('enfjw',views.enfjw,name='enfjw'),
+
+
+    path('enfpc',views.enfpc,name='enfpc'),
+    path('enfpf',views.enfpf,name='enfpf'),
+    path('enfpi',views.enfpi,name='enfpi'),
+    path('enfpp',views.enfpp,name='enfpp'),
+    path('enfpr',views.enfpr,name='enfpr'),
+    path('enfps',views.enfps,name='enfps'),
+    path('enfpw',views.enfpw,name='enfpw'),
+
+    path('entjc',views.entjc,name='entjc'),
+    path('entjf',views.entjf,name='entjf'),
+    path('entji',views.entji,name='entji'),
+    path('entjp',views.entjp,name='entjp'),
+    path('entjr',views.entjr,name='entjr'),
+    path('entjs',views.entjs,name='entjs'),
+    path('entjw',views.entjw,name='entjw'),
+    
+    path('entpc',views.entpc,name='entpc'),
+    path('entpf',views.entpf,name='entpf'),
+    path('entpi',views.entpi,name='entpi'),
+    path('entpp',views.entpp,name='entpp'),
+    path('entpr',views.entpr,name='entpr'),
+    path('entps',views.entps,name='entps'),
+    path('entpw',views.entpw,name='entpw'),
+
+    path('esfjc',views.esfjc,name='esfjc'),
+    path('esfjf',views.esfjf,name='esfjf'),
+    path('esfji',views.esfji,name='esfji'),
+    path('esfjp',views.esfjp,name='esfjp'),
+    path('esfjr',views.esfjr,name='esfjr'),
+    path('esfjs',views.esfjs,name='esfjs'),
+    path('esfjw',views.esfjw,name='esfjw'),
+
+    path('esfpc',views.esfpc,name='esfpc'),
+    path('esfpf',views.esfpf,name='esfpf'),
+    path('esfpi',views.esfpi,name='esfpi'),
+    path('esfpp',views.esfpp,name='esfpp'),
+    path('esfpr',views.esfpr,name='esfpr'),
+    path('esfps',views.esfps,name='esfps'),
+    path('esfpw',views.esfpw,name='esfpw'),
+
+    
+    path('estjc',views.estjc,name='estjc'),
+    path('estjf',views.estjf,name='estjf'),
+    path('estji',views.estji,name='estji'),
+    path('estjp',views.estjp,name='estjp'),
+    path('estjr',views.estjr,name='estjr'),
+    path('estjs',views.estjs,name='estjs'),
+    path('estjw',views.estjw,name='estjw'),
+    
+    path('estpc',views.estpc,name='estpc'),
+    path('estpf',views.estpf,name='estpf'),
+    path('estpi',views.estpi,name='estpi'),
+    path('estpp',views.estpp,name='estpp'),
+    path('estpr',views.estpr,name='estpr'),
+    path('estps',views.estps,name='estps'),
+    path('estpw',views.estpw,name='estpw'),
+    
+    path('infjc',views.infjc,name='infjc'),
+    path('infjf',views.infjf,name='infjf'),
+    path('infji',views.infji,name='infji'),
+    path('infjp',views.infjp,name='infjp'),
+    path('infjr',views.infjr,name='infjr'),
+    path('infjs',views.infjs,name='infjs'),
+    path('infjw',views.infjw,name='infjw'),
+    
+    path('infpc',views.infpc,name='infpc'),
+    path('infpf',views.infpf,name='infpf'),
+    path('infpi',views.infpi,name='infpi'),
+    path('infpp',views.infpp,name='infpp'),
+    path('infpr',views.infpr,name='infpr'),
+    path('infps',views.infps,name='infps'),
+    path('infpw',views.infpw,name='infpw'),
+    
+    path('intjc',views.intjc,name='intjc'),
+    path('intjf',views.intjf,name='intjf'),
+    path('intji',views.intji,name='intji'),
+    path('intjp',views.intjp,name='intjp'),
+    path('intjr',views.intjr,name='intjr'),
+    path('intjs',views.intjs,name='intjs'),
+    path('intjw',views.intjw,name='intjw'),
+    
+    path('intpc',views.intpc,name='intpc'),
+    path('intpf',views.intpf,name='intpf'),
+    path('intpi',views.intpi,name='intpi'),
+    path('intpp',views.intpp,name='intpp'),
+    path('intpr',views.intpr,name='intpr'),
+    path('intps',views.intps,name='intps'),
+    path('intpw',views.intpw,name='intpw'),
+    
+    path('isfjc',views.isfjc,name='isfjc'),
+    path('isfjf',views.isfjf,name='isfjf'),
+    path('isfji',views.isfji,name='isfji'),
+    path('isfjp',views.isfjp,name='isfjp'),
+    path('isfjr',views.isfjr,name='isfjr'),
+    path('isfjs',views.isfjs,name='isfjs'),
+    path('isfjw',views.isfjw,name='isfjw'),
+    
+    path('isfpc',views.isfpc,name='isfpc'),
+    path('isfpf',views.isfpf,name='isfpf'),
+    path('isfpi',views.isfpi,name='isfpi'),
+    path('isfpp',views.isfpp,name='isfpp'),
+    path('isfpr',views.isfpr,name='isfpr'),
+    path('isfps',views.isfps,name='isfps'),
+    path('isfpw',views.isfpw,name='isfpw'),
+    
+    path('istjc',views.istjc,name='istjc'),
+    path('istjf',views.istjf,name='istjf'),
+    path('istji',views.istji,name='istji'),
+    path('istjp',views.istjp,name='istjp'),
+    path('istjr',views.istjr,name='istjr'),
+    path('istjs',views.istjs,name='istjs'),
+    path('istjw',views.istjw,name='istjw'),
+    
+    path('istpc',views.istpc,name='istpc'),
+    path('istpf',views.istpf,name='istpf'),
+    path('istpi',views.istpi,name='istpi'),
+    path('istpp',views.istpp,name='istpp'),
+    path('istpr',views.istpr,name='istpr'),
+    path('istps',views.istps,name='istps'),
+    path('istpw',views.istpw,name='istpw'),
+
+
+
+    path('enfj',views.enfj,name='enfj'),
+    path('enfp',views.enfp,name='enfp'),
+    path('entj',views.entj,name='entj'),
+    path('entp',views.entp,name='entp'),
+    path('esfj',views.esfj,name='esfj'),
+    path('esfp',views.esfp,name='esfp'),
+    path('estj',views.estj,name='estj'),
+    path('estp',views.estp,name='estp'),
+    path('infj',views.infj,name='infj'),
+    path('infp',views.infp,name='infp'),
+    path('intj',views.intj,name='intj'),
+    path('intp',views.intp,name='intp'),
+    path('isfj',views.isfj,name='isfj'),
+    path('isfp',views.isfp,name='isfp'),
+    path('istj',views.istj,name='istj'),
+    path('istp',views.istp,name='istp'),
+
+
+    path('contact',views.contact,name='contact'),
+    path('trial4',views.trial4,name='trial4')
+    
+   
+    
+    ]

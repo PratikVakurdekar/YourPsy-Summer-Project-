@@ -1,0 +1,422 @@
+
+{%load static%}
+
+<html>
+    <head>
+        <script type="text/javascript">
+                function myabc()
+                {
+                        var ab=document.forms["form1"]["a"].value;
+                        if(ab=="")
+                        {
+                                alert("please fill first name");
+                                return false;
+                        }
+                        var bc=document.forms["form1"]["f"].value;
+                        if(bc=="")
+                        {
+                                alert("please fill first name");
+                                return false;
+                        }
+                        var cd=document.forms["form1"]["lion"].value;
+                        if(cd=="")
+                        {
+                                alert("please fill first name");
+                                return false;
+                        }
+                        var de=document.forms["form1"]["you"].value;
+                        if(de=="")
+                        {
+                                alert("please fill first name");
+                                return false;
+                        }
+                        var ef=document.forms["form1"]["of"].value;
+                        if(ef=="")
+                        {
+                                alert("please fill first name");
+                                return false;
+                        }
+                        var fg=document.forms["form1"]["ox"].value;
+                        if(fg=="")
+                        {
+                                alert("please fill first name");
+                                return false;
+                        }
+                        var gh=document.forms["form1"]["ow"].value;
+                        if(gh=="")
+                        {
+                                alert("please fill first name");
+                                return false;
+                        }
+
+                }                           
+        </script>
+        <style>
+        body{
+            margin: 0;
+            padding: 0%;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("{% static 'D:\Project\YourPsy\static\bg3.png' %}");
+          
+            background-attachment: fixed;
+            background-size: cover;
+            
+        }
+      
+        
+        .box input[type="submit"]{
+            border: none;
+            background: transparent;
+            outline: none;
+            color: #fff;
+            font-size: larger;
+            background: #05445E;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 30px;
+            height: 60px;
+            width: 200px;
+            align-self: center;
+            margin-left: 180px;
+           
+        }
+
+        ul{
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 190%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: transparent;
+            padding: 10px 20px;
+            width: 600px;
+            
+            
+            }
+            ul li{
+            list-style: none;
+            position: relative;
+            padding: 10px 0;
+            
+            
+            }
+            
+            ul li:last-child
+            {
+            border-bottom: none;
+            }
+            label{
+                font-size: 18px;
+            color: #000;
+            padding-left: 30px;
+            cursor: pointer;
+        
+            }
+            ul li label
+            {
+            font-size: 18px;
+            color: #000;
+            padding-left: 30px;
+            cursor: pointer;
+            
+            }
+            
+            ul li label input
+            {
+            opacity:0;
+            cursor: pointer;
+            
+            }
+            
+            ul li label .check
+            {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+          
+            display: block;
+            box-sizing: border-box;
+            border-radius: 4px;
+            }
+            ul li label .check:before
+            {
+            content: ' ';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            
+            border-radius: 2px;
+            transition: 0.5s;
+            transform: translateX(185px);
+            }
+            ul li label input:checked ~ .check:before
+            {
+                background: #05445E;
+                /*box-shadow: 0 0 15px #03a9f4; */
+            transform: translateX(0);
+            
+            }
+
+        </style>
+        </head>
+        
+<body>
+        <div class="margin">
+    <div class="box">
+        
+        <div class="inputBox">
+                <ul>    
+    <form action="ned" name="form2" method="POST" onsubmit="return myabc()">
+        {% csrf_token%}
+        <label><h1>Anxiety Test</h1></label><br>
+
+     
+        
+            <label><h3>Q. Do you experience intense anxiety or worry and find it difficult to control?</h3><br></label>
+        <li>
+            <label>Never
+        <input type="radio" name="a" class="" value="1" id="text2" required>
+        <span class="check"></span>
+        </label>
+                </li>
+                <li>
+        <label>Rarely
+        <input type="radio" name="a" class="" value="2" id="text2">
+        <span class="check"></span>
+        </label>
+                </li>
+                <li>
+        <label>Sometimes
+        <input type="radio" name="a" class="" value="3" id="text2">
+        <span class="check"></span>
+        </label>
+                </li>
+                <li>
+        <label>Often
+        <input type="radio" name="a" class="" value="4" id="text2">
+        <span class="check"></span>
+        </label>
+                </li>
+                <li>
+        <label>Very Often
+        <input type="radio" name="a" class="" value="5" id="text2">
+        <span class="check"></span>
+        </label>
+                </li>
+                
+        
+                <label><h3>Q. Does worry or anxiety make you feel fatigued or irritable?</h3><br></label>
+        <li>
+        <label>Never
+            <input type="radio" name="f" class="" value="1" id="text2" required>
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Rarely
+            <input type="radio" name="f" class="" value="2" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Sometimes
+            <input type="radio" name="f" class="" value="3" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Often
+            <input type="radio" name="f" class="" value="4" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Very Often
+            <input type="radio" name="f" class="" value="5" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+            
+                    <label><h3>Q. Does worry or anxiety interfere with your sleep or ability to concentrate?</h3><br></label>
+        <li>
+        <label>Never
+            <input type="radio" name="lion" class="" value="1" id="text2" required>
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Rarely
+            <input type="radio" name="lion" class="" value="2" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Sometimes
+            <input type="radio" name="lion" class="" value="3" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Often
+            <input type="radio" name="lion" class="" value="4" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Very Often
+            <input type="radio" name="lion" class="" value="5" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+            
+                    <label><h3>Q. Do you experience repetitive and persistent thoughts that are upsetting and unwanted?</h3><br></label>
+        <li>
+        <label>Never
+            <input type="radio" name="you" class="" value="1" id="text2" required>
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Rarely
+            <input type="radio" name="you" class="" value="2" id="text2" required>
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Sometimes
+            <input type="radio" name="you" class="" value="3" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Often
+            <input type="radio" name="you" class="" value="4" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Very Often
+            <input type="radio" name="you" class="" value="5" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+            
+        
+                    <label><h3>Q. Do you experience strong fear that causes panic, shortness of breath, chest pains, a pounding heart, sweating, shaking, nausea, dizziness, and/or fear of dying?</h3><br></label>
+                    <li>
+                        <label>Never
+                            <input type="radio" name="of" class="" value="1" id="text2" required>
+                            <span class="check"></span>
+                            </label>
+                                    </li>
+                                    <li>
+                            <label>Rarely
+                            <input type="radio" name="of" class="" value="2" id="text2">
+                            <span class="check"></span>
+                            </label>
+                                    </li>
+                                    <li>
+                            <label>Sometimes
+                            <input type="radio" name="of" class="" value="3" id="text2">
+                            <span class="check"></span>
+                            </label>
+                                    </li>
+                                    <li>
+                            <label>Often
+                            <input type="radio" name="of" class="" value="4" id="text2">
+                            <span class="check"></span>
+                            </label>
+                                    </li>
+                                    <li>
+                            <label>Very Often
+                            <input type="radio" name="of" class="" value="5" id="text2">
+                            <span class="check"></span>
+                            </label>
+                                    </li>
+        <label><h3>Q. Do you ever avoid places or social situations for fear of this panic?</h3><br></label>
+        <li>
+            <label>Never
+                <input type="radio" name="ox" class="" value="1" id="text2" required>
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Rarely
+                <input type="radio" name="ox" class="" value="2" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Sometimes
+                <input type="radio" name="ox" class="" value="3" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Often
+                <input type="radio" name="ox" class="" value="4" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Very Often
+                <input type="radio" name="ox" class="" value="5" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+        <label><h3>Q. Do you ever engage in repetitive behaviors to manage your worry? (i.e. checking the oven is off, locking doors, washing hands, counting, repeating words)</h3><br></label>
+        <li>
+            <label>Never
+                <input type="radio" name="ow" class="" value="1" id="text2" required>
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Rarely
+                <input type="radio" name="ow" class="" value="2" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Sometimes
+                <input type="radio" name="ow" class="" value="3" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Often
+                <input type="radio" name="ow" class="" value="4" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Very Often
+                <input type="radio" name="ow" class="" value="5" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+        <br>
+        <br>
+        <br>
+        <br>
+               <input type="Submit" >
+
+               <br>
+               <br>
+               <br>
+               
+              
+    </form>
+</div>
+</div>
+</div>
+    
+    </body>
+    </html>
+
+

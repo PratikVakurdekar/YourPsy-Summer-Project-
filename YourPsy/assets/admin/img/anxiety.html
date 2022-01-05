@@ -1,0 +1,63 @@
+{%block content%}
+<body>
+    <form action="ned" name="form2" method="POST">
+
+        {% csrf token %}
+        {%load images%}
+
+Do you experience intense anxiety or worry and find it difficult to control?
+<input type="radio" name="a" class="" value="1" id="text2">Never<br>
+<input type="radio" name="a" class="" value="2" id="text2">Rarely<br>
+<input type="radio" name="a" class="" value="3" id="text2">Sometimes<br>
+<input type="radio" name="a" class="" value="4" id="text2">Often<br>
+<input type="radio" name="a" class="" value="5" id="text2">Very Often<br><br>
+
+Does worry or anxiety make you feel fatigued or irritable?
+<input type="radio" name="f" class="" value="1" id="text2">Never<br>
+<input type="radio" name="f" class="" value="2" id="text2">Rarely<br>
+<input type="radio" name="f" class="" value="3" id="text2">Sometimes<br>
+<input type="radio" name="f" class="" value="4" id="text2">Often<br>
+<input type="radio" name="f" class="" value="5" id="text2">Very Often<br><br>
+
+Does worry or anxiety interfere with your sleep or ability to concentrate?
+<input type="radio" name="lion" class="" value="1" id="text2">Never<br>
+<input type="radio" name="lion" class="" value="2" id="text2">Rarely<br>
+<input type="radio" name="lion" class="" value="3" id="text2">Sometimes<br>
+<input type="radio" name="lion" class="" value="4" id="text2">Often<br>
+<input type="radio" name="lion" class="" value="5" id="text2">Very Often<br><br>
+
+Do you experience repetitive and persistent thoughts that are upsetting and unwanted?
+<input type="radio" name="you" class="" value="1" id="text2">Never<br>
+<input type="radio" name="you" class="" value="2" id="text2">Rarely<br>
+<input type="radio" name="you" class="" value="3" id="text2">Sometimes<br>
+<input type="radio" name="you" class="" value="4" id="text2">Often<br>
+<input type="radio" name="you" class="" value="5" id="text2">Very Often<br><br>
+
+Do you experience strong fear that causes panic, shortness of breath, chest pains, a pounding heart, sweating, shaking, nausea, dizziness, and/or fear of dying?
+<input type="radio" name="of" class="" value="1" id="text2">Never<br>
+<input type="radio" name="of" class="" value="2" id="text2">Rarely<br>
+<input type="radio" name="of" class="" value="3" id="text2">Sometimes<br>
+<input type="radio" name="of" class="" value="4" id="text2">Often<br>
+<input type="radio" name="of" class="" value="5" id="text2">Very Often<br><br>
+
+Do you ever avoid places or social situations for fear of this panic?
+<input type="radio" name="ox" class="" value="1" id="text2">Never<br>
+<input type="radio" name="ox" class="" value="2" id="text2">Rarely<br>
+<input type="radio" name="ox" class="" value="3" id="text2">Sometimes<br>
+<input type="radio" name="ox" class="" value="4" id="text2">Often<br>
+<input type="radio" name="ox" class="" value="5" id="text2">Very Often<br><br>
+
+Do you ever engage in repetitive behaviors to manage your worry? (i.e. checking the oven is off, locking doors, washing hands, counting, repeating words)
+<input type="radio" name="ow" class="" value="1" id="text2">Never<br>
+<input type="radio" name="ow" class="" value="2" id="text2">Rarely<br>
+<input type="radio" name="ow" class="" value="3" id="text2">Sometimes<br>
+<input type="radio" name="ow" class="" value="4" id="text2">Often<br>
+<input type="radio" name="ow" class="" value="5" id="text2">Very Often<br><br>
+
+<br>
+    <input type="Submit" >
+    </form>
+    
+    </body>
+{%endblock%}
+

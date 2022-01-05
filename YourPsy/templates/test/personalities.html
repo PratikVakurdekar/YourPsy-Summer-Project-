@@ -1,0 +1,916 @@
+
+{%block data%}
+{%load static %}
+<html>
+<head>
+    
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("{% static 'D:\Project\YourPsy\static\bg.png' %}");
+    background-size: cover;
+    background-attachment: fixed;
+    }
+    
+    ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 610%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: transparent;
+    padding: 10px 20px;
+    width: 600px;
+    
+    
+    }
+    ul li{
+    list-style: none;
+    position: relative;
+    padding: 10px 0;
+    
+    
+    }
+    
+    ul li:last-child
+    {
+    border-bottom: none;
+    }
+    label{
+        font-size: 18px;
+    color: #000;
+    padding-left: 30px;
+    cursor: pointer;
+
+    }
+    ul li label
+    {
+    font-size: 18px;
+    color: #000;
+    padding-left: 30px;
+    cursor: pointer;
+    
+    }
+    
+    ul li label input
+    {
+    opacity:0;
+    cursor: pointer;
+    
+    }
+    
+    ul li label .check
+    {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+  
+    display: block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    }
+    ul li label .check:before
+    {
+    content: ' ';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    
+    border-radius: 2px;
+    transition: 0.5s;
+    transform: translateX(185px);
+    }
+    ul li label input:checked ~ .check:before
+    {
+        background: #255355;
+        /*box-shadow: 0 0 15px #03a9f4; */
+    transform: translateX(0);
+    
+    }
+    .box input[type="submit"]{
+        border: none;
+        background: transparent;
+        outline: none;
+        color: #fff;
+        font-size: larger;
+        background: #255355;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 30px;
+        height: 60px;
+        width: 200px;
+        align-self: center;
+        margin-left: 180px;
+       
+    }
+
+</style>
+</head>
+
+
+<body>
+<div class="box">
+
+<div class="inputBox">
+    <form action="sub" name="form3" method="POST" >
+
+{% csrf_token %}
+<br>
+<ul>
+    <label><h1>MBTI Test</h1></label><br>
+    <label> <h3>Q.  You enjoy vibrant social events with lots of people.</h3></label><br><br>
+    <li>
+    <label>Totally Agree
+        <input type="radio" name="a" class="" value="3" id="text1" required><br>
+    <span class="check"></span>
+    </label></li>
+    <li>
+        <label>Agree
+        <input type="radio" name="a" class="" value="2" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Agree
+        <input type="radio" name="a" class="" value="1" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>No Comments
+        <input type="radio" name="a" class="" value="0" id="text1">
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Disagree
+    <input type="radio" name="a" class="" value="-1" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Disagree
+    <input type="radio" name="a" class="" value="-2" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Totally Disagree
+    <input type="radio" name="a" class="" value="-3" id="text1">
+    <span class="check"></span>
+               </li>
+            </label>
+          
+    
+    <label> <h3>Q.  You often spend time exploring unrealistic yet intriguing ideas.</h3></label><br><br>
+            
+    <li>
+        <label>Totally Agree
+            <input type="radio" name="b" class="" value="3" id="text1"required><br>
+        <span class="check"></span>
+        </label></li>
+        <li>
+            <label>Agree
+            <input type="radio" name="b" class="" value="2" id="text1"><br>
+            <span class="check"></span>
+            </label></li>
+        <li>
+            <label>Somewhat Agree
+            <input type="radio" name="b" class="" value="1" id="text1"><br>
+            <span class="check"></span>
+            </label></li>
+        <li>
+            <label>No Comments
+            <input type="radio" name="b" class="" value="0" id="text1">
+            <span class="check"></span>
+            </label></li>
+        <li>
+            <label>Somewhat Disagree
+        <input type="radio" name="b" class="" value="-1" id="text1">
+        <span class="check"></span>
+            </label></li>
+        <li>
+            <label>Disagree
+        <input type="radio" name="b" class="" value="-2" id="text1">
+        <span class="check"></span>
+            </label></li>
+        <li>
+            <label>Totally Disagree
+        <input type="radio" name="b" class="" value="-3" id="text1">
+        <span class="check"></span>
+                   </li>
+                </label>
+
+ <label> <h3>Q.  You often think about what you should have said in a conversation long after it has taken place.</h3></label><br><br>
+     <li>
+                   <label>Totally Agree
+                       <input type="radio" name="c" class="" value="3" id="text1" required><br>
+                   <span class="check"></span>
+                   </label></li>
+                   <li>
+                       <label>Agree
+                       <input type="radio" name="c" class="" value="2" id="text1"><br>
+                       <span class="check"></span>
+                       </label></li>
+                   <li>
+                       <label>Somewhat Agree
+                       <input type="radio" name="c" class="" value="1" id="text1"><br>
+                       <span class="check"></span>
+                       </label></li>
+                   <li>
+                       <label>No Comments
+                       <input type="radio" name="c" class="" value="0" id="text1">
+                       <span class="check"></span>
+                       </label></li>
+                   <li>
+                       <label>Somewhat Disagree
+                   <input type="radio" name="c" class="" value="-1" id="text1">
+                   <span class="check"></span>
+                       </label></li>
+                   <li>
+                       <label>Disagree
+                   <input type="radio" name="c" class="" value="-2" id="text1">
+                   <span class="check"></span>
+                       </label></li>
+                   <li>
+                       <label>Totally Disagree
+                   <input type="radio" name="c" class="" value="-3" id="text1">
+                   <span class="check"></span>
+                              </li>
+                           </label>
+    
+    <label> <h3>Q.  Your travel plans are more likely to look like a rough list of ideas than a detailed itinerary.  </h3></label><br><br>
+            <li>
+        <label>Totally Agree
+            <input type="radio" name="d" class="" value="3" id="text1" required><br>
+        <span class="check"></span>
+        </label></li>
+        <li>
+            <label>Agree
+            <input type="radio" name="d" class="" value="2" id="text1"><br>
+            <span class="check"></span>
+            </label></li>
+        <li>
+            <label>Somewhat Agree
+            <input type="radio" name="d" class="" value="1" id="text1"><br>
+            <span class="check"></span>
+            </label></li>
+        <li>
+            <label>No Comments
+            <input type="radio" name="d" class="" value="0" id="text1">
+            <span class="check"></span>
+            </label></li>
+        <li>
+            <label>Somewhat Disagree
+        <input type="radio" name="d" class="" value="-1" id="text1">
+        <span class="check"></span>
+            </label></li>
+        <li>
+            <label>Disagree
+        <input type="radio" name="d" class="" value="-2" id="text1">
+        <span class="check"></span>
+            </label></li>
+        <li>
+            <label>Totally Disagree
+        <input type="radio" name="d" class="" value="-3" id="text1">
+        <span class="check"></span>
+                   </li>
+                </label>
+                <label> <h3>Q.  You often rely on other people to be the ones to start a conversation and keep it going.
+                </h3></label><br><br>
+                <li>
+                    <label>Totally Agree
+                        <input type="radio" name="e" class="" value="3" id="text1" required><br>
+                    <span class="check"></span>
+                    </label></li>
+                    <li>
+                        <label>Agree
+                        <input type="radio" name="e" class="" value="2" id="text1"><br>
+                        <span class="check"></span>
+                        </label></li>
+                    <li>
+                        <label>Somewhat Agree
+                        <input type="radio" name="e" class="" value="1" id="text1"><br>
+                        <span class="check"></span>
+                        </label></li>
+                    <li>
+                        <label>No Comments
+                        <input type="radio" name="e" class="" value="0" id="text1">
+                        <span class="check"></span>
+                        </label></li>
+                    <li>
+                        <label>Somewhat Disagree
+                    <input type="radio" name="e" class="" value="-1" id="text1">
+                    <span class="check"></span>
+                        </label></li>
+                    <li>
+                        <label>Disagree
+                    <input type="radio" name="e" class="" value="-2" id="text1">
+                    <span class="check"></span>
+                        </label></li>
+                    <li>
+                        <label>Totally Disagree
+                    <input type="radio" name="e" class="" value="-3" id="text1">
+                    <span class="check"></span>
+                               </li>
+                            </label>                    
+<label> <h3>Q.  You are more of a detail-oriented than a big picture person.
+   </h3></label><br><br>
+            <li>
+             <label>Totally Agree
+                <input type="radio" name="f" class="" value="3" id="text1" required><br>
+               <span class="check"></span>
+                </label></li>
+              <li>
+                   <label>Agree
+              <input type="radio" name="f" class="" value="2" id="text1"><br>
+                  <span class="check"></span>
+                        </label></li>
+                               <li>
+                  <label>Somewhat Agree
+              <input type="radio" name="f" class="" value="1" id="text1"><br>
+                                    <span class="check"></span>
+                                    </label></li>
+                                <li>
+                                    <label>No Comments
+                                    <input type="radio" name="f" class="" value="0" id="text1">
+                                    <span class="check"></span>
+                                    </label></li>
+                                <li>
+                                    <label>Somewhat Disagree
+                                <input type="radio" name="f" class="" value="-1" id="text1">
+                                <span class="check"></span>
+                                    </label></li>
+                                <li>
+                                    <label>Disagree
+                                <input type="radio" name="f" class="" value="-2" id="text1">
+                                <span class="check"></span>
+                                    </label></li>
+                                <li>
+                                    <label>Totally Disagree
+                                <input type="radio" name="f" class="" value="-3" id="text1">
+                                <span class="check"></span>
+                                           </li>
+                                        </label>
+
+<label> <h3>Q.  If your friend is sad about something, your first instinct is to support them emotionally, not try to solve their problem.
+</h3></label><br><br>
+<li>
+    <label>Totally Agree
+        <input type="radio" name="g" class="" value="3" id="text1" required><br>
+    <span class="check"></span>
+    </label></li>
+    <li>
+        <label>Agree
+        <input type="radio" name="g" class="" value="2" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Agree
+        <input type="radio" name="g" class="" value="1" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>No Comments
+        <input type="radio" name="g" class="" value="0" id="text1">
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Disagree
+    <input type="radio" name="g" class="" value="-1" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Disagree
+    <input type="radio" name="g" class="" value="-2" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Totally Disagree
+    <input type="radio" name="g" class="" value="-3" id="text1">
+    <span class="check"></span>
+               </li>
+ </label>
+ 
+ <label> <h3>Q.  If you have to temporarily put your plans on hold, you make sure it is your top priority to get back on track as soon as possible.
+</h3></label><br><br>
+<li>
+    <label>Totally Agree
+        <input type="radio" name="h" class="" value="3" id="text1" required><br>
+    <span class="check"></span>
+    </label></li>
+    <li>
+        <label>Agree
+        <input type="radio" name="h" class="" value="2" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Agree
+        <input type="radio" name="h" class="" value="1" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>No Comments
+        <input type="radio" name="h" class="" value="0" id="text1">
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Disagree
+    <input type="radio" name="h" class="" value="-1" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Disagree
+    <input type="radio" name="h" class="" value="-2" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Totally Disagree
+    <input type="radio" name="h" class="" value="-3" id="text1">
+    <span class="check"></span>
+               </li>
+            </label>
+
+            <label> <h3>Q.  It would be a challenge for you to spend the whole weekend all by yourself without feeling bored.
+            </h3></label><br><br>
+            <li>
+                <label>Totally Agree
+                    <input type="radio" name="i" class="" value="3" id="text1" required><br>
+                <span class="check"></span>
+                </label></li>
+                <li>
+                    <label>Agree
+                    <input type="radio" name="i" class="" value="2" id="text1"><br>
+                    <span class="check"></span>
+                    </label></li>
+                <li>
+                    <label>Somewhat Agree
+                    <input type="radio" name="i" class="" value="1" id="text1"><br>
+                    <span class="check"></span>
+                    </label></li>
+                <li>
+                    <label>No Comments
+                    <input type="radio" name="i" class="" value="0" id="text1">
+                    <span class="check"></span>
+                    </label></li>
+                <li>
+                    <label>Somewhat Disagree
+                <input type="radio" name="i" class="" value="-1" id="text1">
+                <span class="check"></span>
+                    </label></li>
+                <li>
+                    <label>Disagree
+                <input type="radio" name="i" class="" value="-2" id="text1">
+                <span class="check"></span>
+                    </label></li>
+                <li>
+                    <label>Totally Disagree
+                <input type="radio" name="i" class="" value="-3" id="text1">
+                <span class="check"></span>
+                           </li>
+ </label>
+ <label> <h3>Q.  You can stay calm under a lot of pressure.
+</h3></label><br><br>
+<li>
+    <label>Totally Agree
+        <input type="radio" name="j" class="" value="3" id="text1" required><br>
+    <span class="check"></span>
+    </label></li>
+    <li>
+        <label>Agree
+        <input type="radio" name="j" class="" value="2" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Agree
+        <input type="radio" name="j" class="" value="1" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>No Comments
+        <input type="radio" name="j" class="" value="0" id="text1">
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Disagree
+    <input type="radio" name="j" class="" value="-1" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Disagree
+    <input type="radio" name="j" class="" value="-2" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Totally Disagree
+    <input type="radio" name="j" class="" value="-3" id="text1">
+    <span class="check"></span>
+               </li>
+ </label>
+ <label> <h3>Q.  People can rarely upset you.
+</h3></label><br><br>
+<li>
+    <label>Totally Agree
+        <input type="radio" name="k" class="" value="3" id="text1" required><br>
+    <span class="check"></span>
+    </label></li>
+    <li>
+        <label>Agree
+        <input type="radio" name="k" class="" value="2" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Agree
+        <input type="radio" name="k" class="" value="1" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>No Comments
+        <input type="radio" name="k" class="" value="0" id="text1">
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Disagree
+    <input type="radio" name="k" class="" value="-1" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Disagree
+    <input type="radio" name="k" class="" value="-2" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Totally Disagree
+    <input type="radio" name="k" class="" value="-3" id="text1">
+    <span class="check"></span>
+               </li>
+ </label>
+ <label> <h3>Q.  You have a careful and methodical approach to life.
+</h3></label><br><br>
+<li>
+    <label>Totally Agree
+        <input type="radio" name="l" class="" value="3" id="text1" required><br>
+    <span class="check"></span>
+    </label></li>
+    <li>
+        <label>Agree
+        <input type="radio" name="l" class="" value="2" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Agree
+        <input type="radio" name="l" class="" value="1" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>No Comments
+        <input type="radio" name="l" class="" value="0" id="text1">
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Disagree
+    <input type="radio" name="l" class="" value="-1" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Disagree
+    <input type="radio" name="l" class="" value="-2" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Totally Disagree
+    <input type="radio" name="l" class="" value="-3" id="text1">
+    <span class="check"></span>
+               </li>
+</label>
+
+<label> <h3>Q.  At parties and similar events you can mostly be found farther away from the action.
+</h3></label><br><br>
+<li>
+    <label>Totally Agree
+        <input type="radio" name="m" class="" value="3" id="text1" required><br>
+    <span class="check"></span>
+    </label></li>
+    <li>
+        <label>Agree
+        <input type="radio" name="m" class="" value="2" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Agree
+        <input type="radio" name="m" class="" value="1" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>No Comments
+        <input type="radio" name="m" class="" value="0" id="text1">
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Disagree
+    <input type="radio" name="m" class="" value="-1" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Disagree
+    <input type="radio" name="m" class="" value="-2" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Totally Disagree
+    <input type="radio" name="m" class="" value="-3" id="text1">
+    <span class="check"></span>
+               </li>
+</label>
+<label> <h3>Q.  You often find yourself lost in thought when you are walking in nature.
+</h3></label><br><br>
+<li>
+    <label>Totally Agree
+        <input type="radio" name="n" class="" value="3" id="text1" required><br>
+    <span class="check"></span>
+    </label></li>
+    <li>
+        <label>Agree
+        <input type="radio" name="n" class="" value="2" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Agree
+        <input type="radio" name="n" class="" value="1" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>No Comments
+        <input type="radio" name="n" class="" value="0" id="text1">
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Disagree
+    <input type="radio" name="n" class="" value="-1" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Disagree
+    <input type="radio" name="n" class="" value="-2" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Totally Disagree
+    <input type="radio" name="n" class="" value="-3" id="text1">
+    <span class="check"></span>
+               </li>
+ </label>
+ 
+<label> <h3>Q.  You rarely worry if you made a good impression on someone you met.
+</h3></label><br><br>
+<li>
+    <label>Totally Agree
+        <input type="radio" name="o" class="" value="3" id="text1" required><br>
+    <span class="check"></span>
+    </label></li>
+    <li>
+        <label>Agree
+        <input type="radio" name="o" class="" value="2" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Agree
+        <input type="radio" name="o" class="" value="1" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>No Comments
+        <input type="radio" name="o" class="" value="0" id="text1">
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Disagree
+    <input type="radio" name="o" class="" value="-1" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Disagree
+    <input type="radio" name="o" class="" value="-2" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Totally Disagree
+    <input type="radio" name="o" class="" value="-3" id="text1">
+    <span class="check"></span>
+               </li>
+            </label> 
+            <label> <h3>Q.  When looking for a movie to watch, you can spend ages browsing the catalog.
+            </h3></label><br><br>
+            <li>
+                <label>Totally Agree
+                    <input type="radio" name="p" class="" value="3" id="text1" required><br>
+                <span class="check"></span>
+                </label></li>
+                <li>
+                    <label>Agree
+                    <input type="radio" name="p" class="" value="2" id="text1"><br>
+                    <span class="check"></span>
+                    </label></li>
+                <li>
+                    <label>Somewhat Agree
+                    <input type="radio" name="p" class="" value="1" id="text1"><br>
+                    <span class="check"></span>
+                    </label></li>
+                <li>
+                    <label>No Comments
+                    <input type="radio" name="p" class="" value="0" id="text1">
+                    <span class="check"></span>
+                    </label></li>
+                <li>
+                    <label>Somewhat Disagree
+                <input type="radio" name="p" class="" value="-1" id="text1">
+                <span class="check"></span>
+                    </label></li>
+                <li>
+                    <label>Disagree
+                <input type="radio" name="p" class="" value="-2" id="text1">
+                <span class="check"></span>
+                    </label></li>
+                <li>
+                    <label>Totally Disagree
+                <input type="radio" name="p" class="" value="-3" id="text1">
+                <span class="check"></span>
+                           </li>
+</label>
+  
+<label> <h3>Q.  When in a group of people you do not know, you have no problem jumping right into their conversation.
+</h3></label><br><br>
+<li>
+    <label>Totally Agree
+        <input type="radio" name="q" class="" value="3" id="text1" required><br>
+    <span class="check"></span>
+    </label></li>
+    <li>
+        <label>Agree
+        <input type="radio" name="q" class="" value="2" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Agree
+        <input type="radio" name="q" class="" value="1" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>No Comments
+        <input type="radio" name="q" class="" value="0" id="text1">
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Disagree
+    <input type="radio" name="q" class="" value="-1" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Disagree
+    <input type="radio" name="q" class="" value="-2" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Totally Disagree
+    <input type="radio" name="q" class="" value="-3" id="text1">
+    <span class="check"></span>
+               </li>
+</label>
+<label> <h3>Q.  You do not let other people influence your actions.
+</h3></label><br><br>
+<li>
+    <label>Totally Agree
+        <input type="radio" name="r" class="" value="3" id="text1" required><br>
+    <span class="check"></span>
+    </label></li>
+    <li>
+        <label>Agree
+        <input type="radio" name="r" class="" value="2" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Agree
+        <input type="radio" name="r" class="" value="1" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>No Comments
+        <input type="radio" name="r" class="" value="0" id="text1">
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Disagree
+    <input type="radio" name="r" class="" value="-1" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Disagree
+    <input type="radio" name="r" class="" value="-2" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Totally Disagree
+    <input type="radio" name="r" class="" value="-3" id="text1">
+    <span class="check"></span>
+               </li>
+ </label>
+
+ <label> <h3>Q.  You are very affectionate with people you care about.
+</h3></label><br><br>
+<li>
+    <label>Totally Agree
+        <input type="radio" name="s" class="" value="3" id="text1" required><br>
+    <span class="check"></span>
+    </label></li>
+    <li>
+        <label>Agree
+        <input type="radio" name="s" class="" value="2" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Agree
+        <input type="radio" name="s" class="" value="1" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>No Comments
+        <input type="radio" name="s" class="" value="0" id="text1">
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Disagree
+    <input type="radio" name="s" class="" value="-1" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Disagree
+    <input type="radio" name="s" class="" value="-2" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Totally Disagree
+    <input type="radio" name="s" class="" value="-3" id="text1">
+    <span class="check"></span>
+               </li>
+</label>
+<label> <h3>Q.  Your work style is closer to random energy spikes than to a methodical and organized approach.
+</h3></label><br><br>
+<li>
+    <label>Totally Agree
+        <input type="radio" name="t" class="" value="3" id="text1" required><br>
+    <span class="check"></span>
+    </label></li>
+    <li>
+        <label>Agree
+        <input type="radio" name="t" class="" value="2" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Agree
+        <input type="radio" name="t" class="" value="1" id="text1"><br>
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>No Comments
+        <input type="radio" name="t" class="" value="0" id="text1">
+        <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Somewhat Disagree
+    <input type="radio" name="t" class="" value="-1" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Disagree
+    <input type="radio" name="t" class="" value="-2" id="text1">
+    <span class="check"></span>
+        </label></li>
+    <li>
+        <label>Totally Disagree
+    <input type="radio" name="t" class="" value="-3" id="text1">
+    <span class="check"></span>
+               </li>
+            </label>
+      <br>
+      <br>
+      <br>
+        <input type="Submit" > 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </ul>   
+   </form>
+    </div>
+
+</div>
+    </body>
+{% endblock %}    
+
+
+ 

@@ -1,0 +1,166 @@
+
+
+
+{%load static%}
+
+
+
+<html>
+<head>
+<title>Login</title>
+<style>
+    body{
+        margin: 0;
+        padding: 0%;
+        font-family: Arial, Helvetica, sans-serif;
+        background: url("{% static 'D:\Project\YourPsy\static\bg5.png' %}");
+        background-size: cover;
+        color: #000;
+    
+    }
+    .box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 400px;
+        padding: 40px;
+        background:#fff;
+        box-sizing: border-box;
+        box-shadow:0 15px 25px #fff;
+        border-radius: 10px;
+    
+    }
+    .box h1{
+        margin: 0 0 30px;
+        padding: 0;
+        color: #000;
+        text-align: center;
+    
+    }
+    .box .inputBox{
+        position: relative;
+    }
+    
+    .box .inputBox input{
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #000;
+        margin-bottom: 30px;
+        border: none;
+        outline: none;
+        background: transparent;
+        border-bottom: 1px solid;
+    
+        
+    }
+    .box.inputBox label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        pointer-events: none;
+        transition: .5s;
+    
+    }
+    .box.inputBox input:focus ~ label
+    .box.inputBox input:valid ~ label
+    {
+        top: -18px;
+        left: 0;
+        color: #03a9f4;
+        font-size: 12px;
+    } 
+    .box input[type="submit"]{
+        border: none;
+        background: transparent;
+        outline: none;
+        color: #fff;
+        background: #0D314E;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        height: 50px;
+        width: 100px;
+        border-radius: 30px;
+        
+    }
+   
+.ibox select{
+    background:  rgba(0, 0, 0, .8);
+    opacity: .5;
+    color: #fff;
+    padding: 10px;
+    width: 250px;
+    height: 50px;
+    border:none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .8);
+    -webkit-appearance: button;
+    outline: none;
+}
+.ibox ::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    right:0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: rgba(0, 0, 0, .8);
+    font-size: 28px;
+    background: rgba(0, 0, 0, .8);
+    opacity: .5;
+}
+.ibox:hover::before{
+    background: black;
+
+}
+
+    
+</style>
+</head>
+<body>
+{%block submit%}  
+  
+{%endblock%}
+   
+        {% csrf_token %}
+        <div class="random">
+<div class="box">
+<h1>Data</h1>
+
+<div class="inputBox">
+<input type="text" name="Name" placeholder="Full Name" value="" required>
+
+</div>
+<div class="inputBox">
+<input type="email" name="Email" placeholder="Email" value="" required>
+
+
+</div>
+
+    {% block option%}
+      
+    {%endblock%}   
+    
+
+<br><br>
+<div class="inputBox">
+<input type="number"  name="age" placeholder="Age" value="" required> 
+</div>
+<label><input type="radio" name="gender" value="Male" required>Male</label>
+<label><input type="radio" name="gender" value="Female" >Female</label>
+<label><input type="radio" name="gender" value="Other" >Other</label><br><br>
+
+<input type="submit">
+</div>
+</div>
+</div>
+</form>
+</body>
+</html>

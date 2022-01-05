@@ -1,0 +1,469 @@
+
+{%block content%}
+{%load static%}
+
+<html>
+    <head>
+
+        <style>
+        body{
+            margin: 0;
+            padding: 0%;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("{% static 'D:\Project\YourPsy\static\bg4.png' %}");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        
+        .box input[type="submit"]{
+                border: none;
+                background: transparent;
+                outline: none;
+                color: #fff;
+                font-size: larger;
+                background: #21B6A8;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 30px;
+                height: 60px;
+                width: 200px;
+                align-self: center;
+                margin-left: 180px;
+               
+            }
+    
+
+        ul{
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 260%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: transparent;
+            padding: 10px 20px;
+            width: 600px;
+            
+            
+            }
+            ul li{
+            list-style: none;
+            position: relative;
+            padding: 10px 0;
+            
+            
+            }
+            
+            ul li:last-child
+            {
+            border-bottom: none;
+            }
+            label{
+                font-size: 18px;
+            color: #000;
+            padding-left: 30px;
+            cursor: pointer;
+        
+            }
+            ul li label
+            {
+            font-size: 18px;
+            color: #000;
+            padding-left: 30px;
+            cursor: pointer;
+            
+            }
+            
+            ul li label input
+            {
+            opacity:0;
+            cursor: pointer;
+            
+            }
+            
+            ul li label .check
+            {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+          
+            display: block;
+            box-sizing: border-box;
+            border-radius: 4px;
+            }
+            ul li label .check:before
+            {
+            content: ' ';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            
+            border-radius: 2px;
+            transition: 0.5s;
+            transform: translateX(185px);
+            }
+            ul li label input:checked ~ .check:before
+            {
+            background: #05445E;
+            /*box-shadow: 0 0 15px #03a9f4; */
+            transform: translateX(0);
+            
+            }
+
+        </style>
+        </head>
+        
+<body>
+    <div class="box">
+        
+        <div class="inputBox">
+        
+    <form action="adh" name="form2" method="POST">
+        {% csrf_token%}
+      
+
+        <ul>
+                <label><h1>ADHD Test</h1></label><br><br>
+        
+            <label><h3>Q. Do you tend to avoid or delay getting started on a new important task?</h3><br></label>
+        <li>
+            <label>Never
+        <input type="radio" name="nik" class="" value="1" id="text2" required>
+        <span class="check"></span>
+        </label>
+                </li>
+                <li>
+        <label>Rarely
+        <input type="radio" name="nik" class="" value="2" id="text2">
+        <span class="check"></span>
+        </label>
+                </li>
+                <li>
+        <label>Sometimes
+        <input type="radio" name="nik" class="" value="3" id="text2">
+        <span class="check"></span>
+        </label>
+                </li>
+                <li>
+        <label>Often
+        <input type="radio" name="nik" class="" value="4" id="text2">
+        <span class="check"></span>
+        </label>
+                </li>
+                <li>
+        <label>Very Often
+        <input type="radio" name="nik" class="" value="5" id="text2">
+        <span class="check"></span>
+        </label>
+                </li>
+              
+        
+                <br> <label><h3>Q. Do you find that the majority of your tasks (work/school assignments, etc.) are boring or repetitive, making them difficult to complete?</h3><br></label>
+        <li>
+        <label>Never
+            <input type="radio" name="senora" class="" value="1" id="text2" required>
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Rarely
+            <input type="radio" name="senora" class="" value="2" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Sometimes
+            <input type="radio" name="senora" class="" value="3" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Often
+            <input type="radio" name="senora" class="" value="4" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Very Often
+            <input type="radio" name="senora" class="" value="5" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+            
+                    <br>   <label><h3>Q. Do you find yourself making careless mistakes when engaged in something you feel is boring, repetitive, or difficult?
+
+                    </h3><br></label>
+        <li>
+        <label>Never
+            <input type="radio" name="sar" class="" value="1" id="text2" required>
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Rarely
+            <input type="radio" name="sar" class="" value="2" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Sometimes
+            <input type="radio" name="sar" class="" value="3" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Often
+            <input type="radio" name="sar" class="" value="4" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Very Often
+            <input type="radio" name="sar" class="" value="5" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+            
+                    <br>            <label><h3>Q. How often do you feel restless or fidgety?</h3><br></label>
+        <li>
+        <label>Never
+            <input type="radio" name="charu" class="" value="1" id="text2" required>
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Rarely
+            <input type="radio" name="charu" class="" value="2" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Sometimes
+            <input type="radio" name="charu" class="" value="3" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Often
+            <input type="radio" name="charu" class="" value="4" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+                    <li>
+            <label>Very Often
+            <input type="radio" name="charu" class="" value="5" id="text2">
+            <span class="check"></span>
+            </label>
+                    </li>
+            
+        
+                    <br>           <label><h3>Q.Do you regularly fail to remember important appointments or obligations?</h3><br></label>
+                    <li>
+                        <label>Never
+                            <input type="radio" name="dis" class="" value="1" id="text2" required>
+                            <span class="check"></span>
+                            </label>
+                                    </li>
+                                    <li>
+                            <label>Rarely
+                            <input type="radio" name="dis" class="" value="2" id="text2">
+                            <span class="check"></span>
+                            </label>
+                                    </li>
+                                    <li>
+                            <label>Sometimes
+                            <input type="radio" name="dis" class="" value="3" id="text2">
+                            <span class="check"></span>
+                            </label>
+                                    </li>
+                                    <li>
+                            <label>Often
+                            <input type="radio" name="dis" class="" value="4" id="text2">
+                            <span class="check"></span>
+                            </label>
+                                    </li>
+                                    <li>
+                            <label>Very Often
+                            <input type="radio" name="dis" class="" value="5" id="text2">
+                            <span class="check"></span>
+                            </label>
+                                    </li>
+                                    <br>   <label><h3>Q. Do you have difficulty unwinding and relaxing when you have time to yourself?</h3><br></label>
+        <li>
+            <label>Never
+                <input type="radio" name="aunty" class="" value="1" id="text2" required>
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Rarely
+                <input type="radio" name="aunty" class="" value="2" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Sometimes
+                <input type="radio" name="aunty" class="" value="3" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Often
+                <input type="radio" name="aunty" class="" value="4" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Very Often
+                <input type="radio" name="aunty" class="" value="5" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <br>     <label><h3>Q. Do you have difficulty concentrating on people when they are speaking to you?</h3><br></label>
+        <li>
+            <label>Never
+                <input type="radio" name="so" class="" value="1" id="text2" required>
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Rarely
+                <input type="radio" name="so" class="" value="2" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Sometimes
+                <input type="radio" name="so" class="" value="3" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Often
+                <input type="radio" name="so" class="" value="4" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Very Often
+                <input type="radio" name="so" class="" value="5" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+        <br>
+        <label><h3>Q. Do you frequently misplace things (or have difficulty finding them)?</h3><br></label>
+        <li>
+            <label>Never
+                <input type="radio" name="sasa" class="" value="1" id="text2" required>
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Rarely
+                <input type="radio" name="sasa" class="" value="2" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Sometimes
+                <input type="radio" name="sasa" class="" value="3" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Often
+                <input type="radio" name="sasa" class="" value="4" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Very Often
+                <input type="radio" name="sasa" class="" value="5" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+        <br>
+        <label><h3>Q. Are you typically distracted (or find it hard to focus) when there is activity or noise around you?</h3><br></label>
+        <li>
+            <label>Never
+                <input type="radio" name="kom" class="" value="1" id="text2" required>
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Rarely
+                <input type="radio" name="kom" class="" value="2" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Sometimes
+                <input type="radio" name="kom" class="" value="3" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Often
+                <input type="radio" name="kom" class="" value="4" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Very Often
+                <input type="radio" name="kom" class="" value="5" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+        <br>
+        <label><h3>Q. Do you have difficulty waiting your turn in situations where waiting is expected and appropriate?</h3><br></label>
+        <li>
+            <label>Never
+                <input type="radio" name="que" class="" value="1" id="text2" required>
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Rarely
+                <input type="radio" name="que" class="" value="2" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Sometimes
+                <input type="radio" name="que" class="" value="3" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Often
+                <input type="radio" name="que" class="" value="4" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+                        <li>
+                <label>Very Often
+                <input type="radio" name="que" class="" value="5" id="text2">
+                <span class="check"></span>
+                </label>
+                        </li>
+        <br>
+        <br>
+               <input type="Submit" >
+
+               <br>
+               <br>
+               <br>
+    </form>
+</div>
+</div>
+    
+    </body>
+    </html>
+
+{% endblock %}
+

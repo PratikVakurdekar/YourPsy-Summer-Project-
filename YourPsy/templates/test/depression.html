@@ -1,0 +1,434 @@
+
+{%block content%}
+{%load static %}
+<html>
+<head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("{% static 'D:\Project\YourPsy\static\bg2.png' %}");
+    background-size: cover;
+   background-attachment: fixed;
+    }
+    
+    ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 260%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: transparent;
+    padding: 10px 20px;
+    width: 600px;
+    
+    
+    }
+    ul li{
+    list-style: none;
+    position: relative;
+    padding: 10px 0;
+    
+    
+    }
+    
+    ul li:last-child
+    {
+    border-bottom: none;
+    }
+    label {
+    font-size: 18px;
+    color: #000;
+    padding-left: 30px;
+    cursor: pointer;
+
+    }
+    h1{
+        
+        color: #000;
+        padding-left: 30px;
+    }
+    ul li label
+    {
+    font-size: 18px;
+    color: #000;
+    padding-left: 30px;
+    cursor: pointer;
+    
+    }
+    
+    ul li label input
+    {
+    opacity:0;
+    cursor: pointer;
+    
+    }
+    
+    ul li label .check
+    {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+  
+    display: block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    }
+    ul li label .check:before
+    {
+    content: ' ';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    
+    border-radius: 2px;
+    transition: 0.5s;
+    transform: translateX(185px);
+    }
+    ul li label input:checked ~ .check:before
+    {
+        background: #66afbe;
+        /*box-shadow: 0 0 15px #03a9f4; */
+    transform: translateX(0);
+    
+    }
+
+    .box input[type="submit"]{
+        border: none;
+        background: transparent;
+        outline: none;
+        color: #fff;
+        font-size: larger;
+        background: #66afbe;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 30px;
+        height: 60px;
+        width: 200px;
+        align-self: center;
+        margin-left: 180px;
+       
+    }
+
+</style>
+</head>
+
+
+<body>
+<div class="box">
+
+<div class="inputBox">
+    <form action="end" name="form1" method="POST" >
+
+{% csrf_token %}
+<ul>
+<h1>Depression</h1>
+
+    <br>
+        <label><h3>Q.  Little interest or pleasure in doing things</h3></label><br><br>
+       
+       <li>
+            <label>Not at all
+            <input type="radio" name="no" class="" value="1" id="text1" required>
+            <span class="check"></span>
+            </li>
+        </label>
+        <li>
+            <label>Rarely
+            <input type="radio" name="no" class="" value="2" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Sometimes
+            <input type="radio" name="no" class="" value="3" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Everytime
+            <input type="radio" name="no" class="" value="4" id="text1"><br><br>
+            <span class="check"></span>
+            </li>
+        </label> 
+    <br><br>
+       <label><h3> Q. Feeling down,depressed,or hopeless</h3></label><br><br>
+        
+      
+       <li>
+            <label>Not at all
+            <input type="radio" name="o" class="" value="1" id="text1" required>
+            <span class="check"></span>
+            </li>
+        </label>
+        <li>
+            <label>Rarely
+            <input type="radio" name="o" class="" value="2" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Sometimes
+            <input type="radio" name="o" class="" value="3" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Everytime
+            <input type="radio" name="o" class="" value="4" id="text1"><br><br>
+            <span class="check"></span>
+            </li>
+        </label> 
+     <br><br>
+    <label><h3>Q. Trouble falling or staying asleep,or sleeping too much </h3> </label><br><br>
+        
+       <li>
+            <label>Not at all
+            <input type="radio" name="n" class="" value="1" id="text1" required>
+            <span class="check"></span>
+            </li>
+        </label>
+        <li>
+            <label>Rarely
+            <input type="radio" name="n" class="" value="2" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Sometimes
+            <input type="radio" name="n" class="" value="3" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Everytime
+            <input type="radio" name="n" class="" value="4" id="text1"><br><br>
+            <span class="check"></span>
+            </li>
+        </label> 
+    <br><br>  
+    <label><h3>Q.  Feeling tired or having little energy</h3></label><br><br>
+        
+     
+       <li>
+            <label>Not at all
+            <input type="radio" name="ola" class="" value="1" id="text1" required>
+            <span class="check"></span>
+            </li>
+        </label>
+        <li>
+            <label>Rarely
+            <input type="radio" name="ola" class="" value="2" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Sometimes
+            <input type="radio" name="ola" class="" value="3" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Everytime
+            <input type="radio" name="ola" class="" value="4" id="text1"><br><br>
+            <span class="check"></span>
+            </li>
+        </label>
+    <br><br>   
+    <label><h3>Q.  Poor appetite or overeating</h3></label><br>
+        
+        <br>
+    
+       <li>
+            <label>Not at all
+            <input type="radio" name="nola" class="" value="1" id="text1"required>
+            <span class="check"></span>
+            </li>
+        </label>
+        <li>
+            <label>Rarely
+            <input type="radio" name="nola" class="" value="2" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Sometimes
+            <input type="radio" name="nola" class="" value="3" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Everytime
+            <input type="radio" name="nola" class="" value="4" id="text1"><br><br>
+            <span class="check"></span>
+            </li>
+        </label> 
+    <br><br>  
+    <label><h3>Q.  Feeling bad about yourself - or that you are a failure or have let yourself or your family down</h3> </label><br>
+        
+        <br>
+     
+       <li>
+            <label>Not at all
+            <input type="radio" name="nole" class="" value="1" id="text1" required>
+            <span class="check"></span>
+            </li>
+        </label>
+        <li>
+            <label>Rarely
+            <input type="radio" name="nole" class="" value="2" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Sometimes
+            <input type="radio" name="nole" class="" value="3" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Everytime
+            <input type="radio" name="nole" class="" value="4" id="text1"><br><br>
+            <span class="check"></span>
+            </li>
+        </label> 
+    <br><br>
+    <label><h3>Q.  Trouble concentrating on things, such as reading the newspaper or watching television</label></h3><br>
+        
+        <br>
+     
+       <li>
+            <label>Not at all
+            <input type="radio" name="nose" class="" value="1" id="text1" required>
+            <span class="check"></span>
+            </li>
+        </label>
+        <li>
+            <label>Rarely
+            <input type="radio" name="nose" class="" value="2" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Sometimes
+            <input type="radio" name="nose" class="" value="3" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Everytime
+            <input type="radio" name="nose" class="" value="4" id="text1"><br><br>
+            <span class="check"></span>
+            </li>
+        </label> 
+    <br><br>
+    <label><h3>Q.  Moving or speaking so slowly that other people could have noticed</h3></label><br>
+        
+        <br>
+     
+       <li>
+            <label>Not at all
+            <input type="radio" name="non" class="" value="1" id="text1" required>
+            <span class="check"></span>
+            </li>
+        </label>
+        <li>
+            <label>Rarely
+            <input type="radio" name="non" class="" value="2" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Sometimes
+            <input type="radio" name="non" class="" value="3" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Everytime
+            <input type="radio" name="non" class="" value="4" id="text1"><br><br>
+            <span class="check"></span>
+            </li>
+        </label> 
+    <br><br>
+    <label><h3>Q.  Thoughts that you would be better off dead, or of hurting yourself</h3></label><br>
+        
+        <br>
+    
+       <li>
+            <label>Not at all
+            <input type="radio" name="norm" class="" value="1" id="text1" required>
+            <span class="check"></span>
+            </li>
+        </label>
+        <li>
+            <label>Rarely
+            <input type="radio" name="norm" class="" value="2" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Sometimes
+            <input type="radio" name="norm" class="" value="3" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Everytime
+            <input type="radio" name="norm" class="" value="4" id="text1"><br><br>
+            <span class="check"></span>
+            </li>
+        </label> 
+     <br>
+        <br>
+       <label><h3> Q.  If you've had any days with issues above, how difficult have these problems made it for you at work, home, school, or with other people?</h3></label><br>
+        
+        <br>
+        
+       <li>
+            <label>Not at all
+            <input type="radio" name="nova" class="" value="1" id="text1" required>
+            <span class="check"></span>
+            </li>
+        </label>
+        <li>
+            <label>Rarely
+            <input type="radio" name="nova" class="" value="2" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Sometimes
+            <input type="radio" name="nova" class="" value="3" id="text1"><br>
+            <span class="check"></span>
+            </li>
+        </label>
+            <li>
+                <label>Everytime
+            <input type="radio" name="nova" class="" value="4" id="text1"><br><br>
+            <span class="check"></span>
+            </li>
+        </label> 
+    <br>
+    <br>
+    <br>
+    
+    <input type="Submit" > 
+    <br>
+    <br>
+    <br>
+    </ul>   
+   </form>
+    </div>
+
+</div>
+    </body>
+    
+{% endblock %}    

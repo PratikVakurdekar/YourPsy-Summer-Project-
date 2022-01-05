@@ -1,0 +1,265 @@
+{% block content %}
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'D:\Project\YourPsy\static\result.css' %}">
+    
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<header class="sticky">
+        <a href="#" class="logo"> <img src="{% static 'D:\Project\YourPsy\static\brain.png'%}" height="60px" width="60px"></a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="trial2">About</a></li>
+            <li><a href="flip">Personality</a></li>
+            <li><a href="xander">Test</a></li>
+            <li><a href="contact">Contact us</a></li>
+            <li><a href="quote">Quote</a></ li>
+        </ul>
+        </ul>
+    </header>
+    <section class="banner"></section>
+    <script type="text/javascript">
+        window.addEventListener("scroll",function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky",window.scrollY > 0);
+        })
+    </script>
+
+    
+
+{% if result < 20 %}
+
+<div>
+    <nav>
+        <a href="dintro">Introduction</a><br><br>
+        <br><a href="depression">Test</a><br><br>
+        <br><a href="dmedication">Medication</a><br><br>
+    </nav>
+    <main>
+
+<h3>Result : No Depression</h3>
+<img src="{% static 'D:\Project\YourPsy\static\low.jpg' %}" width="280px" height="200px" ><br>
+	
+Your answers suggest you may not be suffering from depression. Still if you feel something isn’t quite right we recommend you schedule an appointment with your doctor. 
+
+</main>
+{% endif %}
+
+{%if result > 20 and result < 30 %}
+
+<div>
+    <nav>
+        <a href="dintro">Introduction</a><br><br>
+        <br><a href="depression">Test</a><br><br>
+        <br><a href="dmedication">Medication</a><br><br>
+    </nav>
+    <main>
+<h3>Result :Moderate Depression</h3>
+
+<img src="{% static 'D:\Project\YourPsy\static\medium.jpg' %}" width="280px" height="200px" ><br>
+	
+Your answers suggest you are suffering from minimal depression. Consider watchful waiting, and testing again normally within two weeks.Still if you don’t feel quite right we recommend you schedule an appointment with your doctor.
+<br>
+we would recomend you to try relaxing yourself by
+<ul>
+    <li>
+        Talking about your problems with your dear one's
+    </li>
+    <li>
+        Reaching out to your friends for some help
+    </li>
+    <li>
+        Going on a short vacation
+    </li>
+    <li>
+        Practicising Yoga
+    </li>
+</ul>
+
+</main>
+{% endif %}
+
+
+
+{% if result > 30 %}
+
+<div>
+    <nav>
+        <a href="dintro">Introduction</a><br><br>
+        <br><a href="depression">Test</a><br><br>
+        <br><a href="dmedication">Medication</a><br><br>
+    </nav>
+    <main>
+
+<h3>Result: Severe Depression</h3>
+<img src="{% static 'D:\Project\YourPsy\static\high.jpg' %}" width="280px" height="200px" ><br>
+	
+	Your answers suggest you are suffering from severe depression. It is important that you schedule an appointment with your doctor or a mental health worker now
+	
+    </main>
+{% endif %}
+
+</div>
+
+{% if resu < 12 %}
+
+<div>
+    <nav>
+        <a href="aintro">Introduction</a><br><br>
+        <br><a href="anxiety">Test</a><br><br>
+        <br><a href="amedication">Medication</a><br><br>
+    </nav>
+    <main>
+
+<h3>Result : No Anxiety</h3>
+<img src="{% static 'D:\Project\YourPsy\static\low.jpg' %}" width="280px" height="200px" ><br>
+	
+Your answers suggest you may not be suffering from anxiety. Still if you feel something isn’t quite right we recommend you schedule an appointment with your doctor. 
+
+</main>
+</div>
+{% endif %}
+
+{% if resu > 12 and resu < 26 %}
+
+<div>
+    <nav>
+        <a href="aintro">Introduction</a><br><br>
+        <br><a href="anxiety">Test</a><br><br>
+        <br><a href="amedication">Medication</a><br><br>
+    </nav>
+    <main>
+
+<h3>Result : Moderate Anxiety</h3>
+<img src="{% static 'D:\Project\YourPsy\static\medium.jpg' %}" width="280px" height="200px" ><br>
+	
+Your answers suggest you may not be suffering from anxiety. Still if you feel something isn’t quite right we recommend you schedule an appointment with your doctor. 
+<br>
+we would recomend you to try relaxing yourself by
+<ul>
+    <li>
+        Talking about your problems with your dear one's
+    </li>
+    <li>
+        Reaching out to your friends for some help 
+    </li>
+    <li>
+        Going on a short vacation
+    </li>
+    <li>
+        Practicising Yoga
+    </li>
+</ul>
+
+
+</main>
+</div>
+{% endif %}
+
+{% if resu > 26 %}
+
+<div>
+    <nav>
+        <a href="aintro">Introduction</a><br><br>
+        <br><a href="anxiety">Test</a><br><br>
+        <br><a href="amedication">Medication</a><br><br>
+    </nav>
+    <main>
+
+<h3>Result : Severe Anxiety</h3>
+<img src="{% static 'D:\Project\YourPsy\static\high.jpg' %}" width="280px" height="200px" ><br>
+	
+Your answers suggest you are suffering from severe anxiety. We highly recommend you to schedule an appointment with your doctor. 
+
+</main>
+</div>
+{% endif %}
+
+
+{% if report < 17 %}
+
+<div>
+    <nav>
+        <a href="adhdintro">Introduction</a><br><br>
+        <br><a href="adhd">Test</a><br><br>
+        <br><a href="adhdmedic">Medication</a><br><br>
+    </nav>
+    <main>
+
+<br>
+<h3>Result : No ADHD</h3>
+<img src="{% static 'D:\Project\YourPsy\static\low.jpg' %}" width="280px" height="200px" ><br>
+	
+Your answers suggest you may not be suffering from ADHD. Still if you feel something isn’t quite right we recommend you schedule an appointment with your doctor. 
+
+</main>
+{% endif %}
+
+{% if report > 17 and report < 34 %}
+
+<div>
+    <nav>
+        <a href="adhdintro">Introduction</a><br><br>
+        <br><a href="adhd">Test</a><br><br>
+        <br><a href="adhdmedic">Medication</a><br><br>
+    </nav>
+    <main>
+ 
+<br>
+<br>
+<h3>Result :Moderate ADHD</h3>
+
+<img src="{% static 'D:\Project\YourPsy\static\medium.jpg' %}" width="280px" height="200px" ><br>
+	
+Your answers suggest you are suffering from minimal ADHD. Consider watchful waiting, and testing again normally within two weeks.Still if you don’t feel quite right we recommend you schedule an appointment with your doctor.
+<br>
+we would recomend you to try relaxing yourself by
+<ul>
+    <li>
+        Talking about your problems with your dear one's
+    </li>
+    <li>
+        Try to face the problems head on
+    </li>
+    
+</ul>
+
+</main>
+{% endif %}
+
+
+
+{% if report > 34 %}
+
+<div>
+    <nav>
+        <a href="adhdintro">Introduction</a><br><br>
+        <br><a href="adhd">Test</a><br><br>
+        <br><a href="adhdmedic">Medication</a><br><br>
+    </nav>
+    <main>
+       
+        <br>
+        <br>
+<h3>Result: Severe ADHD</h3>
+<img src="{% static 'D:\Project\YourPsy\static\high.jpg' %}" width="280px" height="200px" ><br>
+	
+	Your answers suggest you are suffering from severe ADHD. It is important that you schedule an appointment with your doctor or a mental health worker now
+	
+    </main>
+</div>
+{% endif %}
+
+
+
+
+</body>
+</html>
+{% endblock %}
+
